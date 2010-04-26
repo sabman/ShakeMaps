@@ -1,8 +1,3 @@
-Blog: geo
-Title: USGS earthquake feed map
-Category: interoperability
-Tags: ruby, openlayers, georss, sinatra
-
 Today a colleague wanted to know if OpenLayers can handle "GeoRSS":http://www.georss.org/ feeds from USGS(US Geological Survey). They publish the location of earthquakes as a GeoRSS feed. They also publish a product called "ShakeMaps":http://earthquake.usgs.gov/earthquakes/shakemap/. This is a fantastic product since it provides a map of the actual "ground shaking" a not just the simplistic magnitude and epicentre. Creating a ShakeMap is a function of local geology, epicentre, magnitude and many other variables. You can read about it "here":http://earthquake.usgs.gov/earthquakes/shakemap/background.php. ShakeMap are thus much more useful from a disaster response and recovery point-of-view. For example if you have the necessary data on geology and population exposure you can run a model that simulates an earthquake over a region to predict the likely affect on the population.   
 
 Getting back to the GeoRSS - the ShakeMap feed allows us to integrate this into any web mapping application thus creating interesting mashups. E.g. overlaying it with socio-economic or population exposure or vulnerability data to show the simulation results I mention above. 
