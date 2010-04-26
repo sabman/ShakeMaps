@@ -13,7 +13,9 @@ Here is the code for the routes in sinatra:
 
 <code>
 require 'rubygems'
+
 require 'sinatra'
+
 require 'open-uri'
 
 get '/' do
@@ -29,5 +31,5 @@ When the client hits the our root url (/) we will render the OpenLayers map with
 
 So in our shakemaps.rb the first route is to the root. This is pretty simple, when the root of the app is hit the server renders the shakemaps "haml":http://haml-lang.com/ template. The haml template loads our javascript to render the OpenLayers map. This javascript also calls the shakemap GeoRSS feed via a proxy. The proxy is needed because OpenLayers which is a javascript library isn't allowed cross-site-server calls. The proxy is where the second method in shakemaps.rb comes along. It looks for the parameter url at the end of the URI and simply opens it. This is the GeoRSS XML feed. Finally there is a form allowing us to point to other GeoRSS feeds. 
 
-See the demo "here":http:shakemaps.heroku.com
+See the demo "here":http://shakemaps.heroku.com
 Get the code at "shakemaps":http://github.com/sabman/shakemaps
