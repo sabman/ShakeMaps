@@ -100,8 +100,8 @@ h6 {
  * Map Examples Specific
  */
 .smallmap {
-    width: 512px;
-    height: 256px;
+    width: 550px;
+    height: 350px;
     border: 1px solid #ccc;
 }
 #tags {

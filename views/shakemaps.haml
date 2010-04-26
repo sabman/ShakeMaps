@@ -19,13 +19,15 @@
           %input{ :type=>"submit", :onclick=>"addUrl(); return false;", :value=>"Load Feed", :onsubmit=>"addUrl(); return false;" }    
 
         %h4 Example:
-        %p To try this out, enter the following URL in field and press the "Load Feed" button
+        %p To try this out, entering one of the following URLs in field and press the "Load Feed" button
+        %pre http://www.accidentmap.com/en/georss/
         %pre http://earthquake.usgs.gov/earthquakes/shakemap/rss.xml
+        %pre http://newsrss.bbc.co.uk//rss/newsonline_world_edition/science/nature/rss.xml        
                     
       #sidebar
         %h4 Background:
         %p
-          %a{:href => "http://geospatial.nomad-labs.com/2010/04/26/usgs-earthquake-feed-map/", :rel => "external"}
+          %a{:href => "http://geospatial.nomad-labs.com/2010/04/26/usgs-shakemap-feed/", :rel => "external"}
             Read the blog post
         
         %h4 Get the code:
