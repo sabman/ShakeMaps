@@ -1,0 +1,35 @@
+%html
+  %head
+    %link{:rel => "stylesheet", :href => "http://openlayers.org/dev/theme/default/style.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "css/style.css", :type => "text/css"}
+    %script{:src => "http://openlayers.org/dev/OpenLayers.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "js/shakemaps.js", :type => "text/javascript"}
+
+  %body{:onload => "init(); addUrl()"}
+    #container
+      #content
+        %h1{ :id => "title"} USGS ShakeMaps Feed 
+        %p{ :id => "shortdesc"} Demo of GeoRSS in OpenLayers
+    
+        #map.smallmap
+    
+        %form{ :onsubmit => "return false;" }
+          GeoRSS URL: 
+          %input{ :type=>"text", :id=>"url", :size=>"50", :value=>""}
+          %input{ :type=>"submit", :onclick=>"addUrl(); return false;", :value=>"Load Feed", :onsubmit=>"addUrl(); return false;" }    
+
+        %h4 Example:
+        %p To try this out, enter the following URL in field and press the "Load Feed" button
+        %pre http://earthquake.usgs.gov/earthquakes/shakemap/rss.xml
+                    
+      #sidebar
+        %h4 Background:
+        %p
+          %a{:href => "http://geospatial.nomad-labs.com", :rel => "external"}
+            Blog post
+        
+        %h4 Code:
+        %p 
+          %a{:href => "http://github.com/sabman/shakemaps", :rel=>"external"} 
+            http://github.com/sabman/shakemaps
+            
